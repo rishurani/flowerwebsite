@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Floral Delight</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Fresh Flowers</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="review.html">Reviews</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="registration.html">registration</a></li>
+                
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Image -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Fresh Flowers</h2>
+            <p> Flowers for Every Occasion</p>
+            <a href="shop.html" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="product-list">
+                <!-- Product 1 - Roses -->
+                <div class="product">
+                    <img src="roses.webp" alt="Roses">
+                    <h3>Roses</h3>
+                    <p class="price">$20.00</p>
+                    <button class="btn" onclick="addToCart('Roses', 20)">Add to Cart</button>
+                </div>
+
+                <!-- Product 2 - Lilies -->
+                <div class="product">
+                    <img src="lilies.jpg" alt="Lilies">
+                    <h3>Lilies</h3>
+                    <p class="price">$18.00</p>
+                    <button class="btn" onclick="addToCart('Lilies', 18)">Add to Cart</button>
+                </div>
+
+                <!-- Product 3 - Sunflowers -->
+                <div class="product">
+                    <img src="sunflower.jpg" alt="Sunflowers">
+                    <h3>Sunflowers</h3>
+                    <p class="price">$15.00</p>
+                    <button class="btn" onclick="addToCart('Sunflowers', 15)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fresh Flowers.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
+
+   
+           
