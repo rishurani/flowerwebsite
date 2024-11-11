@@ -79,6 +79,59 @@
         </div>
     </div>
 
+    <script>
+        function validateForm() {
+            let isValid = true;
+            // Reset all error messages
+            document.getElementById('nameError').innerText = '';
+            document.getElementById('passwordError').innerText = '';
+            document.getElementById('confirmPasswordError').innerText = '';
+            document.getElementById('genderError').innerText = '';
+            document.getElementById('phoneError').innerText = '';
+
+            // Name validation
+            const name = document.getElementById('name').value;
+            if (name.length < 3) {
+                document.getElementById('nameError').innerText = 'Name must be at least 3 characters long.';
+                isValid = false;
+            }
+
+            // Password validation
+            const password = document.getElementById('password').value;
+            if (password.length < 6) {
+                document.getElementById('passwordError').innerText = 'Password must be at least 6 characters long.';
+                isValid = false;
+            }
+
+            // Confirm password validation
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            if (password !== confirmPassword) {
+                document.getElementById('confirmPasswordError').innerText = 'Passwords do not match.';
+                isValid = false;
+            }
+
+            // Gender validation
+            const gender = document.querySelector('input[name="gender"]:checked');
+            if (!gender) {
+                document.getElementById('genderError').innerText = 'Please select your gender.';
+                isValid = false;
+            }
+
+            // Phone number validation
+            const phone = document.getElementById('phone').value;
+            if (phone.length < 10 || !/^\d+$/.test(phone)) {
+                document.getElementById('phoneError').innerText = 'Phone number must be at least 10 digits.';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+
+</body>
+</html>
+
+
     
 </body>
 
